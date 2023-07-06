@@ -18,34 +18,34 @@ a {
 
 /* *** HEADER ELEMENT STYLINGS *** */
 #header-layout {
-  grid-template-rows: 100px 50px;
-  grid-template-columns: minmax(200px, 33%) 67%;
+  grid-template-rows: minmax(50px, 3vw) minmax(20px, 1.5vw);
+  grid-template-columns: minmax(200px, 25%) 75%;
+  grid-column-gap: 12px;
 }
 #header-layout > #name-box {
   grid-area: 1 / 1 / span 2 / 1;
-  align-items: end;
+  align-items: start;
   justify-content: end;
+  padding-left: 12px;
 }
 #header-layout > #name-box > #my-name {
   white-space: nowrap;
-  font-size: max(36px, 3vw);
-  margin-left: 1em;
-  padding-right: 1.7em;
-  padding-bottom: 0.3em;
+  font-size: max(36px, 2.5vw);
+  margin-left: auto;
+  margin-right: 1.5em;
+  margin-bottom: 0.1em;
 }
 #header-layout > #header-buttons-layout {
-  grid-template-columns: repeat(4, minmax(5em, 10vw));
+  grid-template-columns: repeat(4, minmax(6em, 6vw));
   grid-template-rows: 100%;
-  grid-gap: 0.5em;
-  margin-left: 3.5em;
-  margin-right: 2em;
+  grid-gap: 1vw;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-left: 3.5em;
+  margin-right: 2em; */
 }
-#header-buttons-layout > .header-button {
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  font-weight: 500;
+.header-button {
+  display: block;
 }
 
 
@@ -83,4 +83,15 @@ a {
 
 .font-system {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.button-text {
+  text-align: center;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
 }
