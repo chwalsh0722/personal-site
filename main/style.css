@@ -12,18 +12,22 @@ a {
 }
 
 #content {
-  grid-template-rows: 150px 1fr 80px;
+  grid-template-rows: minmax(70px, 4.5vw) 1fr 80px;
   grid-template-columns: 100%;
 }
 
-/* *** HEADER ELEMENT STYLINGS *** */
+/* 
+
+*** HEADER ELEMENT STYLINGS ***
+
+ */
 #header-layout {
-  grid-template-rows: minmax(50px, 3vw) minmax(20px, 1.5vw);
+  grid-template-rows: minmax(70px, 4.5vw);
   grid-template-columns: minmax(200px, 25%) 75%;
   grid-column-gap: 12px;
 }
 #header-layout > #name-box {
-  grid-area: 1 / 1 / span 2 / 1;
+  grid-area: 1 / 1 / 1 / 1;
   align-items: start;
   justify-content: end;
   padding-left: 12px;
@@ -40,27 +44,41 @@ a {
   grid-template-rows: 100%;
   margin-left: auto;
   margin-right: auto;
-  /* margin-left: 3.5em;
-  margin-right: 2em; */
+}
+.button-text {
+  padding-top: max(16px, 1.2vw);
+  height: max(50px, 2vw);
 }
 .header-button {
-  padding-left: 6px;
-  padding-right: 6px;
-  /* min-height: 50px;
-  height: 3vw;
-  transition: height 0.5s ease-out; */
+  height: 100%;
 }
-/* .header-button:hover {
-  background-color: rgb(87, 8, 133);
-  height: calc(3vw + 1.5vw);
-  min-height: calc(50px + 20px);
-} */
+.header-button-hovered {
+  height: 0px;
+  transition: height 0.3s ease-out;
+}
+.header-button-hovered:hover {
+  height: 80%;
+}
+.header-button:hover ~ .current-page {
 
-/* *** BODY ELEMENT STYLINGS *** */
+}
 
-/* *** FOOTER ELEMENT STYLINGS *** */
+/* 
 
-/* *** MISCELLANEOUS STYLINGS *** */
+*** BODY ELEMENT STYLINGS ***
+
+ */
+
+/* 
+
+*** FOOTER ELEMENT STYLINGS ***
+
+ */
+/* 
+
+*** MISCELLANEOUS STYLINGS ***
+
+ */
 .flex-column { 
   display: flex;
   flex-direction: column;
