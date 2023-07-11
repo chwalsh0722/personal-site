@@ -3,6 +3,10 @@
   margin: 0px;
 }
 
+html {
+  min-width: 100vw;
+  min-height: 100vh;
+}
 body {
   min-width: 100vw;
   min-height: 100vh;
@@ -72,10 +76,13 @@ a {
 *** BODY ELEMENT STYLINGS ***
 
  */
-#body-layout {
+ /* home page */
+#body-layout-home, #body-layout-about, #body-layout-projects, #body-layout-contact {
+  padding: 3vw;
+}
+#body-layout-home {
   grid-template-rows: 1100px;
   grid-template-columns: 1fr 1fr;
-  padding-top: 3vw;
 }
 #body-text {
   margin-top: max(155px, 10vw);
@@ -83,17 +90,20 @@ a {
   height: auto;
 }
 .body-text-box {
-  margin-right: 9vw;
-  padding: 20px;
+  margin-right: 8vw;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  padding-left: 24px;
+  padding-right: 24px;
   border-radius: 20px;
 }
 .text-header {
-  font-size: max(24px, 2.7vw);
+  font-size: max(24px, 2.5vw);
   font-weight: 400;
 }
 .text-1{
   font-size: max(18px, 1.5vw);
-
+  font-weight: 400;
 }
 #site-greeting {
   padding: 20px;
@@ -104,6 +114,42 @@ a {
   margin-top: 40px;
   margin-right: 5vw;
   margin-left: 2vw;
+}
+
+/* about page */
+#body-layout-about {
+  grid-template-rows: 500px 500px;
+  grid-template-columns: 1fr 1fr;
+}
+.text-panel {
+  padding: 1.5vw;
+}
+.textbox {
+  height: 0px;
+  width: 800px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-radius: 20px;
+  transition: height 0.5s ease, background-color 0.5s ease;
+}
+.textbox.is-active {
+  height: 375px;
+  background-color: rgb(53, 31, 61);
+}
+
+div.textbox-header {
+  background-color: rgb(72, 40, 83);
+  height: 60px;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+  top: 20px;
+  cursor: pointer;
+}
+.textbox-text {
+
 }
 /* 
 
