@@ -12,7 +12,6 @@ a {
 }
 
 #content {
-  /* grid-template-rows: minmax(70px, 4.5vw) auto 80px; */
   grid-auto-rows: auto auto auto;
   grid-template-columns: 1fr;
 }
@@ -43,8 +42,9 @@ a {
 #header-layout > #header-buttons-layout {
   grid-template-columns: repeat(4, minmax(4.5em, 6vw));
   grid-template-rows: 100%;
+  grid-column-gap: 24px;
   margin-left: auto;
-  margin-right: 35vw;
+  margin-right: 30vw;
 }
 .header-button-text {
   padding-top: max(16px, 1.2vw);
@@ -54,14 +54,17 @@ a {
   font-weight: 500;
 }
 .header-button {
-  height: 100%;
+  height: 80%;
 }
 .header-button-hovered {
   height: 0px;
   transition: height 0.3s ease-out;
 }
 .header-button-hovered:hover {
-  height: 80%;
+  height: 100%;
+}
+.current-page-button {
+  text-decoration: underline;
 }
 
 /* 
@@ -84,25 +87,36 @@ a {
   padding: 20px;
   border-radius: 20px;
 }
-#site-greeting {
-  font-size: max(34px, 2.7vw);
+.text-header {
+  font-size: max(24px, 2.7vw);
   font-weight: 400;
+}
+.text-1{
+  font-size: max(18px, 1.5vw);
+
+}
+#site-greeting {
   padding: 20px;
   background-color: rgb(72, 40, 83);
   border-radius: 20px;
 }
-#site-description {
-  font-size: max(24px, 1.5vw);
+#site-greeting-subtext {
   margin-top: 40px;
   margin-right: 5vw;
   margin-left: 2vw;
 }
-
 /* 
 
 *** FOOTER ELEMENT STYLINGS ***
 
  */
+#footer-layout {
+  height: 120px;
+}
+.footer-content {
+  font-size: 18px;
+  font-weight: 300;
+}
 
 /* 
 
@@ -122,7 +136,7 @@ a {
   background-color: rgb(37, 27, 41);
 }
 .background-purple {
-  background-color: rgb(87, 8, 133);
+  background-color: rgb(83, 26, 116);
 }
 .background-darkpurple {
   background-color: rgb(53, 31, 61);
