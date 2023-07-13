@@ -118,8 +118,8 @@ a {
 
 /* about page */
 #body-layout-about {
-  grid-template-rows: 500px 500px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 500px);
+  grid-template-columns: repeat(2, 1fr);
 }
 .text-panel {
   padding: 1.5vw;
@@ -139,10 +139,11 @@ a {
   max-height: 100%;
   background-color: rgb(53, 31, 61);
 }
-
 div.textbox-header {
   background-color: rgb(72, 40, 83);
   height: 36px;
+  width: auto;
+  justify-self: center;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 24px;
@@ -151,6 +152,11 @@ div.textbox-header {
   cursor: pointer;
   text-align: center;
   font-size: 24px;
+  transition: padding 0.5s ease;
+}
+div.textbox-header:hover {
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 div.textbox-text {
   margin-top: 12px;
@@ -158,19 +164,34 @@ div.textbox-text {
   padding-right: 36px;
   text-align: left;
   font-size: 20px;
+  max-height: 0px;
   color: transparent;
-  transition: color 0.5s ease;
+  transition: color 0.5s ease, max-height 0.5s ease;
   resize: none;
 }
 .textbox-text.is-active {
+  transition: max-height 0.1s ease, color 0.5s ease;
   color: white;
+  max-height: calc(500px - 56px);
 }
 
 #college-text {
   grid-row-start: 1;
   grid-row-end: 1;
-  grid-column-start: 3;
-  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+#tate-and-lyle-text {
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+#programming-text {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
 }
 /* 
 
