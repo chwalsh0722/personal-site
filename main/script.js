@@ -24,21 +24,21 @@ function expandAboutTextWindow(event) {
     }
 }
 
-function getViewportWidth() {
-    return window.innerWidth;
-}
+// function getViewportWidth() {
+//     return window.innerWidth;
+// }
 
-function rearrangeAboutContent () {
-    console.log('resize detected');
-    const VPwidth = getViewportWidth();
-    const body = document.getElementById('body-layout-about');
-    if (VPwidth < 1300) {
-        body.style.gridTemplateColumns = '1fr';
-    } else {
-        body.style.gridTemplateColumns = 'repeat(2, 1fr)';
-    }
-}
+// function rearrangeAboutContent () {
+//     console.log('resize detected');
+//     const VPwidth = getViewportWidth();
+//     const body = document.getElementById('body-layout-about');
+//     if (VPwidth < 1300) {
+//         body.style.gridTemplateColumns = '1fr';
+//     } else {
+//         body.style.gridTemplateColumns = 'repeat(2, 1fr)';
+//     }
+// }
 
-document.addEventListener('DOMContentLoaded',
-    window.addEventListener('resize', rearrangeAboutContent)
-);
+// document.addEventListener('DOMContentLoaded',
+//     window.addEventListener('resize', rearrangeAboutContent)
+// );
