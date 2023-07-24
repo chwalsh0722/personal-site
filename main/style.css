@@ -118,11 +118,16 @@ a {
 
 /* about page */
 #body-layout-about {
-  grid-template-rows: repeat(3, 500px);
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: repeat(auto-fit, 500px); */
+  grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
 }
 .text-panel {
-  padding: 1.5vw;
+  margin-top: 1.5vw;
+  margin-bottom: 1.5vw;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  /* padding: 1.5vw; */
+
 }
 .textbox {
   max-height: 0;
@@ -175,7 +180,7 @@ div.textbox-text {
   max-height: calc(500px - 56px);
 }
 
-#college-text {
+/* #college-text {
   grid-row-start: 1;
   grid-row-end: 1;
   grid-column-start: 2;
@@ -192,7 +197,14 @@ div.textbox-text {
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 2;
+} */
+
+/* contact page */
+.LI-profile-badge {
+  margin-left: 15vw;
+  margin-top: 200px;
 }
+
 /* 
 
 *** FOOTER ELEMENT STYLINGS ***
@@ -254,4 +266,13 @@ div.textbox-text {
 .flex-center {
   justify-content: center;
   align-items: center;
+}
+
+.image-placeholder {
+  height: 400px;
+  width: 400px;
+  background-color: rgb(83, 26, 116);
+  border-radius: 12px;
+  align-self: center;
+  justify-self: center;
 }
