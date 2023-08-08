@@ -120,6 +120,7 @@ a {
 #body-layout-about {
   /* grid-template-rows: repeat(auto-fit, 500px); */
   grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
+  grid-gap: 50px;
 }
 .text-panel {
   margin-top: 1.5vw;
@@ -127,7 +128,6 @@ a {
   margin-left: 1.5vw;
   margin-right: 1.5vw;
   /* padding: 1.5vw; */
-
 }
 .textbox {
   max-height: 0;
@@ -137,6 +137,7 @@ a {
   padding-left: 24px;
   padding-right: 24px;
   border-radius: 20px;
+  position: relative;
   transition: max-height 0.5s ease, background-color 0.5s ease;
 }
 .textbox.is-active {

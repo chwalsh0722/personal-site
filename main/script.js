@@ -14,6 +14,31 @@
 //     }
 // }
 
+function aboutWindowResize() {
+    // Only run this function if on the "About" page.
+    const currPage = document.getElementsByClassName("current-page-button");
+    if (currPage[0].innerHTML != "About") {
+        return;
+    }
+
+    const gridComputedStyle = window.getComputedStyle(document.getElementById('body-layout-about'));
+    const textboxes = document.getElementsByClassName("textbox");
+    const gridColumnCount = gridComputedStyle.getPropertyValue("grid-template-columns").split(" ").length;
+    if (gridColumnCount === 1) {
+        console.log("1 column");
+        for (let i = 0; i < textboxes.length; i++) {
+            textboxes[i].style.bottom = '50px';
+        }
+    } else if (gridColumnCount >= 2) {
+        console.log("more than 1 column");
+        for (let i = 0; i < textboxes.length; i++) {
+            textboxes[i].style.bottom = '0px';
+        }
+    }
+}
+
+window.addEventListener("resize", aboutWindowResize);
+
 function expandAboutTextWindow(event) {
     const textboxHeader = event.srcElement;
     const textbox = textboxHeader.parentNode;
@@ -23,6 +48,8 @@ function expandAboutTextWindow(event) {
         contents[i].classList.toggle('is-active');
     }
 }
+
+
 
 // function getViewportWidth() {
 //     return window.innerWidth;
