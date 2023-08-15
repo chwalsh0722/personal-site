@@ -128,12 +128,12 @@ a {
   margin-left: 1.5vw;
   margin-right: 1.5vw;
   max-height: fit-content;
-  transition: max-height 1s ease;
+  /* transition: max-height 1s ease; */
 }
-.text-panel.is-active {
+/* .text-panel.is-active {
   transition: max-height 1s ease;
   max-height: fit-content;
-}
+} */
 .textbox {
   max-height: 0;
   width: min(85%, 700px);
@@ -143,10 +143,12 @@ a {
   padding-right: 24px;
   border-radius: 20px;
   background-color: transparent;
-  transition: max-height 0.5s ease, background-color 0.5s ease;
+  transition: max-height 0.4s ease, background-color 0.4s ease;
+  transition-delay: 0.4s;
+  transition-property: max-height, background-color;
 }
 .textbox.is-active {
-  transition: max-height 0.5s ease, background-color 0.5s ease;
+  transition: max-height 0.4s ease, background-color 0.4s ease;
   max-height: 100%;
   background-color: rgb(53, 31, 61);
 }
@@ -178,11 +180,15 @@ div.textbox-text {
   font-size: 20px;
   max-height: 0px;
   color: transparent;
-  transition: color 0.25s ease, max-height 0.25s ease;
+  transition: color 0.4s 0s ease, max-height 0.4s 0.4s ease;
+  /* transition-delay: 0.5s;
+  transition-property: max-height, color; */
   resize: none;
 }
 .textbox-text.is-active {
-  transition: max-height 0.5s ease, color 2s ease;
+  transition: color 0.4s ease, max-height 0.4s ease;
+  transition-delay: 0.4s;
+  transition-property: color;
   color: white;
   max-height: calc(500px - 56px);
 }
