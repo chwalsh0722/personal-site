@@ -122,23 +122,20 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(800px, 1fr));
   grid-gap: 50px;
 }
+
 .text-panel {
   margin-top: 1.5vw;
   margin-bottom: 1.5vw;
   margin-left: 1.5vw;
   margin-right: 1.5vw;
-  max-height: fit-content;
-  /* transition: max-height 1s ease; */
+  min-height: 140px;
 }
-/* .text-panel.is-active {
-  transition: max-height 1s ease;
-  max-height: fit-content;
-} */
+
 .textbox {
   max-height: 0;
   width: min(85%, 700px);
   padding-top: 12px;
-  padding-bottom: 12px;
+  padding-bottom: 24px;
   padding-left: 24px;
   padding-right: 24px;
   border-radius: 20px;
@@ -146,6 +143,8 @@ a {
   transition: max-height 0.4s ease, background-color 0.4s ease;
   transition-delay: 0.4s;
   transition-property: max-height, background-color;
+  position: relative;
+  bottom: 24px;
 }
 .textbox.is-active {
   transition: max-height 0.4s ease, background-color 0.4s ease;
@@ -178,11 +177,9 @@ div.textbox-text {
   padding-right: 36px;
   text-align: left;
   font-size: 20px;
-  max-height: 0px;
+  max-height: 1px;
   color: transparent;
   transition: color 0.4s 0s ease, max-height 0.4s 0.4s ease;
-  /* transition-delay: 0.5s;
-  transition-property: max-height, color; */
   resize: none;
 }
 .textbox-text.is-active {
@@ -192,25 +189,6 @@ div.textbox-text {
   color: white;
   max-height: calc(500px - 56px);
 }
-
-/* #college-text {
-  grid-row-start: 1;
-  grid-row-end: 1;
-  grid-column-start: 2;
-  grid-column-end: 2;
-}
-#tate-and-lyle-text {
-  grid-row-start: 2;
-  grid-row-end: 2;
-  grid-column-start: 2;
-  grid-column-end: 2;
-}
-#programming-text {
-  grid-row-start: 3;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 2;
-} */
 
 /* contact page */
 .LI-profile-badge {
@@ -286,6 +264,6 @@ div.textbox-text {
   width: 400px;
   background-color: rgb(83, 26, 116);
   border-radius: 12px;
-  align-self: center;
+  align-self: start;
   justify-self: center;
 }
